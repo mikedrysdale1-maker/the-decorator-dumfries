@@ -75,446 +75,75 @@
       justify-content: space-between;
     }
 
-    .logo-text {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.55rem;
-      font-weight: 600;
-      color: var(--gold);
-      letter-spacing: 0.5px;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: var(--cream);
-      font-size: 0.95rem;
-      font-weight: 500;
-      letter-spacing: 0.3px;
-      transition: color 0.25s;
-    }
-
-    .nav-links a:hover {
-      color: var(--gold);
-    }
-
-    .nav-phone {
-      background: var(--gold);
-      color: var(--navy);
-      padding: 0.55rem 1.2rem;
-      border-radius: 4px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: background 0.25s, transform 0.2s;
-    }
-
-    .nav-phone:hover {
-      background: var(--gold-light);
-      transform: translateY(-1px);
-    }
-
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      background: none;
-      border: none;
-      padding: 4px;
-    }
-
-    .hamburger span {
-      width: 24px;
-      height: 2px;
-      background: var(--gold);
-      transition: 0.3s;
-    }
-
-    .hero {
-      min-height: 100vh;
-      background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, #0F2A5A 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 6rem 1.5rem 4rem;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(ellipse at 30% 20%, rgba(201, 162, 39, 0.08) 0%, transparent 50%);
-      pointer-events: none;
-    }
-
-    .hero-content {
-      max-width: 800px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-logo {
-      width: 180px;
-      height: 180px;
-      margin: 0 auto 2rem;
-      border-radius: 50%;
-      box-shadow: 0 12px 40px rgba(0,0,0,0.4);
-      border: 3px solid var(--gold);
-    }
-
-    .hero h1 {
-      font-size: clamp(2.6rem, 6vw, 4rem);
-      color: var(--gold);
-      margin-bottom: 0.6rem;
-      letter-spacing: 1px;
-    }
-
-    .hero-tagline {
-      font-size: clamp(1.1rem, 2.5vw, 1.35rem);
-      color: var(--cream);
-      font-weight: 300;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 1.8rem;
-    }
-
-    .hero-desc {
-      font-size: 1.15rem;
-      color: rgba(248, 246, 241, 0.85);
-      max-width: 560px;
-      margin: 0 auto 2.5rem;
-      font-weight: 300;
-    }
-
-    .btn {
-      display: inline-block;
-      background: var(--gold);
-      color: var(--navy);
-      padding: 1rem 2.4rem;
-      font-weight: 600;
-      font-size: 1.05rem;
-      border-radius: 4px;
-      letter-spacing: 0.5px;
-      transition: all 0.3s;
-      border: 2px solid var(--gold);
-    }
-
-    .btn:hover {
-      background: transparent;
-      color: var(--gold);
-      transform: translateY(-2px);
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: var(--gold);
-      margin-left: 1rem;
-    }
-
-    .btn-outline:hover {
-      background: var(--gold);
-      color: var(--navy);
-    }
-
-    section {
-      padding: 5.5rem 1.5rem;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: clamp(2rem, 4vw, 2.6rem);
-      margin-bottom: 0.6rem;
-    }
-
-    .section-subtitle {
-      text-align: center;
-      color: var(--muted);
-      font-size: 1.05rem;
-      margin-bottom: 3.5rem;
-      font-weight: 300;
-    }
-
-    .gold-line {
-      width: 60px;
-      height: 3px;
-      background: var(--gold);
-      margin: 0 auto 2.5rem;
-    }
-
-    .about {
-      background: var(--cream);
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 3.5rem;
-      align-items: center;
-    }
-
-    .about-text p {
-      margin-bottom: 1.2rem;
-      color: var(--muted);
-      font-size: 1.05rem;
-    }
-
-    .about-list {
-      list-style: none;
-      margin-top: 1.5rem;
-    }
-
-    .about-list li {
-      padding: 0.55rem 0;
-      padding-left: 1.8rem;
-      position: relative;
-      color: var(--text);
-      font-weight: 500;
-    }
-
-    .about-list li::before {
-      content: '✦';
-      position: absolute;
-      left: 0;
-      color: var(--gold);
-      font-size: 0.9rem;
-    }
-
-    .about-image {
-      background: var(--navy);
-      border-radius: 12px;
-      padding: 2.5rem;
-      text-align: center;
-      color: var(--cream);
-      box-shadow: 0 20px 50px rgba(10, 31, 68, 0.15);
-    }
-
-    .about-image img {
-      width: 160px;
-      margin: 0 auto 1.5rem;
-      border-radius: 50%;
-      border: 3px solid var(--gold);
-    }
-
-    .about-image h3 {
-      color: var(--gold);
-      font-size: 1.5rem;
-      margin-bottom: 0.4rem;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.8rem;
-    }
-
-    .service-card {
-      background: var(--white);
-      border: 1px solid #E8E4DC;
-      border-radius: 10px;
-      padding: 2.2rem 1.8rem;
-      transition: all 0.3s;
-      text-align: center;
-    }
-
-    .service-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 16px 40px rgba(10, 31, 68, 0.1);
-      border-color: var(--gold);
-    }
-
-    .service-icon {
-      font-size: 2.2rem;
-      margin-bottom: 1.1rem;
-      color: var(--gold);
-    }
-
-    .service-card h3 {
-      font-size: 1.3rem;
-      margin-bottom: 0.7rem;
-    }
-
-    .service-card p {
-      color: var(--muted);
-      font-size: 0.98rem;
-      font-weight: 300;
-    }
-
-    .contact {
-      background: linear-gradient(135deg, var(--navy-dark), var(--navy));
-      color: var(--cream);
-    }
-
-    .contact .section-title {
-      color: var(--gold);
-    }
-
-    .contact .section-subtitle {
-      color: rgba(248, 246, 241, 0.75);
-    }
-
-    .contact .gold-line {
-      background: var(--gold);
-    }
-
-    .contact-box {
-      max-width: 760px;
-      margin: 0 auto;
-      background: rgba(255,255,255,0.04);
-      border: 1px solid rgba(201, 162, 39, 0.25);
-      border-radius: 18px;
-      padding: 2.5rem;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.18);
-    }
-
-    .contact-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1.25rem;
-      margin-top: 1.5rem;
-    }
-
-    .contact-card {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(201, 162, 39, 0.15);
-      border-radius: 14px;
-      padding: 1.5rem 1rem;
-      text-align: center;
-      transition: transform 0.25s ease, border-color 0.25s ease;
-    }
-
-    .contact-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(201, 162, 39, 0.6);
-    }
-
-    .contact-icon {
-      width: 52px;
-      height: 52px;
-      margin: 0 auto 0.9rem;
-      display: grid;
-      place-items: center;
-      border-radius: 50%;
-      background: rgba(201, 162, 39, 0.12);
-      color: var(--gold);
-      font-size: 1.4rem;
-      font-weight: 700;
-    }
-
-    .contact-card h3 {
-      color: var(--gold);
-      font-size: 1rem;
-      margin-bottom: 0.5rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .contact-card a,
-    .contact-card span {
-      color: rgba(248, 246, 241, 0.88);
-      font-size: 1rem;
-      font-weight: 500;
-    }
-
-    .contact-phone {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.6rem, 3vw, 2.2rem);
-      color: var(--gold);
-      display: block;
-      margin: 1.4rem 0 1rem;
-      text-align: center;
-    }
-
-    .contact-phone:hover {
-      color: var(--gold-light);
-    }
-
-    .contact-box p {
-      color: rgba(248, 246, 241, 0.8);
-      margin-bottom: 0.6rem;
-      text-align: center;
-    }
-
-    .contact-cta {
-      margin-top: 2rem;
-      text-align: center;
-    }
-
-    footer {
-      background: var(--navy-dark);
-      color: rgba(248, 246, 241, 0.7);
-      text-align: center;
-      padding: 2rem 1.5rem;
-      font-size: 0.9rem;
-    }
-
-    footer strong {
-      color: var(--gold);
-    }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: var(--navy);
-        flex-direction: column;
-        padding: 1.5rem;
-        gap: 1.2rem;
-        text-align: center;
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .nav-phone {
-        display: none;
-      }
-
-      .hamburger {
-        display: flex;
-      }
-
-      .about-grid {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-      }
-
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-logo {
-        width: 140px;
-        height: 140px;
-      }
-
-      .btn-outline {
-        margin-left: 0;
-        margin-top: 1rem;
-        display: block;
-      }
-
-      .btn {
-        display: block;
-        width: 100%;
-        max-width: 280px;
-        margin: 0 auto;
-      }
-    }
+    .logo-text { font-family: 'Playfair Display', serif; font-size: 1.55rem; font-weight: 600; color: var(--gold); letter-spacing: 0.5px; }
+
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { color: var(--cream); font-size: 0.95rem; font-weight: 500; letter-spacing: 0.3px; transition: color 0.25s; }
+    .nav-links a:hover { color: var(--gold); }
+
+    .nav-phone { background: var(--gold); color: var(--navy); padding: 0.55rem 1.2rem; border-radius: 4px; font-weight: 600; font-size: 0.95rem; transition: background 0.25s, transform 0.2s; }
+    .nav-phone:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { width: 24px; height: 2px; background: var(--gold); transition: 0.3s; }
+
+    .hero { min-height: 100vh; background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, #0F2A5A 100%); display: flex; align-items: center; justify-content: center; text-align: center; padding: 6rem 1.5rem 4rem; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 20%, rgba(201, 162, 39, 0.08) 0%, transparent 50%); pointer-events: none; }
+    .hero-content { max-width: 800px; position: relative; z-index: 1; }
+    .hero-logo { width: 180px; height: 180px; margin: 0 auto 2rem; border-radius: 50%; box-shadow: 0 12px 40px rgba(0,0,0,0.4); border: 3px solid var(--gold); }
+    .hero h1 { font-size: clamp(2.6rem, 6vw, 4rem); color: var(--gold); margin-bottom: 0.6rem; letter-spacing: 1px; }
+    .hero-tagline { font-size: clamp(1.1rem, 2.5vw, 1.35rem); color: var(--cream); font-weight: 300; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 1.8rem; }
+    .hero-desc { font-size: 1.15rem; color: rgba(248, 246, 241, 0.85); max-width: 560px; margin: 0 auto 2.5rem; font-weight: 300; }
+
+    .btn { display: inline-block; background: var(--gold); color: var(--navy); padding: 1rem 2.4rem; font-weight: 600; font-size: 1.05rem; border-radius: 4px; letter-spacing: 0.5px; transition: all 0.3s; border: 2px solid var(--gold); }
+    .btn:hover { background: transparent; color: var(--gold); transform: translateY(-2px); }
+    .btn-outline { background: transparent; color: var(--gold); margin-left: 1rem; }
+    .btn-outline:hover { background: var(--gold); color: var(--navy); }
+
+    section { padding: 5.5rem 1.5rem; }
+    .container { max-width: 1100px; margin: 0 auto; }
+    .section-title { text-align: center; font-size: clamp(2rem, 4vw, 2.6rem); margin-bottom: 0.6rem; }
+    .section-subtitle { text-align: center; color: var(--muted); font-size: 1.05rem; margin-bottom: 3.5rem; font-weight: 300; }
+    .gold-line { width: 60px; height: 3px; background: var(--gold); margin: 0 auto 2.5rem; }
+
+    .about { background: var(--cream); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center; }
+
+    /* Services */
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.8rem; }
+
+    /* Contact (refined card layout with icons + hover) */
+    .contact { background: linear-gradient(135deg, var(--navy-dark), var(--navy)); color: var(--cream); }
+    .contact .section-title { color: var(--gold); }
+    .contact .section-subtitle { color: rgba(248, 246, 241, 0.75); }
+    .contact .gold-line { background: var(--gold); }
+
+    .contact-box { max-width: 960px; margin: 0 auto; background: rgba(255,255,255,0.04); border: 1px solid rgba(201, 162, 39, 0.18); border-radius: 18px; padding: 2.5rem; box-shadow: 0 18px 36px rgba(0,0,0,0.16); }
+
+    .contact-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.25rem; margin-top: 1.5rem; }
+
+    .contact-card { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border: 1px solid rgba(201, 162, 39, 0.12); border-radius: 14px; padding: 1.5rem 1rem; text-align: center; transition: transform 0.28s cubic-bezier(.2,.8,.2,1), box-shadow 0.28s, border-color 0.28s, background 0.28s; }
+
+    .contact-card:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 20px 40px rgba(10,31,68,0.18); border-color: rgba(201,162,39,0.6); background: linear-gradient(180deg, rgba(201,162,39,0.03), rgba(255,255,255,0.02)); }
+
+    .contact-icon { width: 64px; height: 64px; margin: 0 auto 0.9rem; display: grid; place-items: center; border-radius: 50%; background: rgba(201, 162, 39, 0.10); color: var(--gold); font-size: 1.4rem; }
+
+    .contact-icon svg { width: 28px; height: 28px; fill: var(--gold); transition: transform 0.28s; }
+    .contact-card:hover .contact-icon svg { transform: translateY(-4px) rotate(-6deg); }
+
+    .contact-card h3 { color: var(--gold); font-size: 1rem; margin-bottom: 0.4rem; letter-spacing: 0.08em; text-transform: uppercase; }
+    .contact-card a, .contact-card span { color: rgba(248, 246, 241, 0.95); font-size: 1rem; font-weight: 500; }
+
+    .contact-phone { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--gold); display: block; margin: 1.4rem 0 1rem; text-align: center; }
+
+    .contact-box p { color: rgba(248, 246, 241, 0.85); margin-bottom: 0.6rem; text-align: center; }
+    .contact-cta { margin-top: 2rem; text-align: center; }
+
+    footer { background: var(--navy-dark); color: rgba(248, 246, 241, 0.7); text-align: center; padding: 2rem 1.5rem; font-size: 0.9rem; }
+    footer strong { color: var(--gold); }
+
+    @media (max-width: 900px) { .contact-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
+    @media (max-width: 540px) { .contact-grid { grid-template-columns: 1fr; } .nav-links { display: none; } .nav-links.active { display: flex; } .nav-phone { display: none; } .hamburger { display: flex; } }
   </style>
 </head>
 <body>
@@ -541,9 +170,7 @@
       <img src="logo.png" alt="The Decorator Logo" class="hero-logo">
       <h1>The Decorator</h1>
       <p class="hero-tagline">High Class Painting & Decorating</p>
-      <p class="hero-desc">
-        Transforming homes and commercial spaces across Dumfries with exceptional craftsmanship and attention to detail.
-      </p>
+      <p class="hero-desc">Transforming homes and commercial spaces across Dumfries with exceptional craftsmanship and attention to detail.</p>
       <div>
         <a href="tel:07954879190" class="btn">Call 07954 879190</a>
         <a href="#services" class="btn btn-outline">Our Services</a>
@@ -556,15 +183,10 @@
       <h2 class="section-title">About The Decorator</h2>
       <div class="gold-line"></div>
       <p class="section-subtitle">High-class painting and decorating in Dumfries</p>
-
       <div class="about-grid">
         <div class="about-text">
-          <p>
-            At The Decorator we specialise in delivering a superior finish that homeowners and businesses across Dumfries and the surrounding area can be proud of.
-          </p>
-          <p>
-            Every project is approached with the same care and professionalism — from thorough surface preparation through to the final coat.
-          </p>
+          <p>At The Decorator we specialise in delivering a superior finish that homeowners and businesses across Dumfries and the surrounding area can be proud of.</p>
+          <p>Every project is approached with the same care and professionalism — from thorough surface preparation through to the final coat.</p>
           <ul class="about-list">
             <li>Thorough preparation – the foundation of every lasting job</li>
             <li>Premium paints and materials</li>
@@ -576,9 +198,7 @@
         <div class="about-image">
           <img src="logo.png" alt="The Decorator">
           <h3>The Decorator</h3>
-          <p style="color: rgba(248,246,241,0.85); font-size: 0.95rem;">
-            Proudly serving Dumfries<br>and the wider region
-          </p>
+          <p style="color: rgba(248,246,241,0.85); font-size: 0.95rem;">Proudly serving Dumfries<br>and the wider region</p>
         </div>
       </div>
     </div>
@@ -589,38 +209,13 @@
       <h2 class="section-title">Our Services</h2>
       <div class="gold-line"></div>
       <p class="section-subtitle">Professional painting & decorating tailored to your property</p>
-
       <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">🎨</div>
-          <h3>Interior Painting</h3>
-          <p>Complete room makeovers, feature walls, ceilings and woodwork finished to the highest standard.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🏠</div>
-          <h3>Exterior Painting</h3>
-          <p>Weather-resistant coatings that protect and enhance your property’s kerb appeal for years to come.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">📜</div>
-          <h3>Wallpapering</h3>
-          <p>Expert hanging of all types of wallpaper, including specialist and designer papers.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🪵</div>
-          <h3>Woodwork Finishing</h3>
-          <p>Doors, skirting, architraves and window frames carefully prepared and finished.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🏢</div>
-          <h3>Commercial Decorating</h3>
-          <p>Offices, retail spaces and business premises completed to a professional standard with minimal disruption.</p>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">✨</div>
-          <h3>Full Property Redecoration</h3>
-          <p>End-to-end projects managed from start to finish with clear communication throughout.</p>
-        </div>
+        <div class="service-card"><div class="service-icon">🎨</div><h3>Interior Painting</h3><p>Complete room makeovers, feature walls, ceilings and woodwork finished to the highest standard.</p></div>
+        <div class="service-card"><div class="service-icon">🏠</div><h3>Exterior Painting</h3><p>Weather-resistant coatings that protect and enhance your property’s kerb appeal for years to come.</p></div>
+        <div class="service-card"><div class="service-icon">📜</div><h3>Wallpapering</h3><p>Expert hanging of all types of wallpaper, including specialist and designer papers.</p></div>
+        <div class="service-card"><div class="service-icon">🪵</div><h3>Woodwork Finishing</h3><p>Doors, skirting, architraves and window frames carefully prepared and finished.</p></div>
+        <div class="service-card"><div class="service-icon">🏢</div><h3>Commercial Decorating</h3><p>Offices, retail spaces and business premises completed to a professional standard with minimal disruption.</p></div>
+        <div class="service-card"><div class="service-icon">✨</div><h3>Full Property Redecoration</h3><p>End-to-end projects managed from start to finish with clear communication throughout.</p></div>
       </div>
     </div>
   </section>
@@ -635,23 +230,34 @@
         <a href="tel:07954879190" class="contact-phone">07954 879190</a>
 
         <div class="contact-grid">
+
           <div class="contact-card">
-            <div class="contact-icon">☎</div>
+            <div class="contact-icon" aria-hidden="true">
+              <!-- Phone SVG -->
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6.6 10.2a15.1 15.1 0 006.2 6.2l1.9-1.9a1 1 0 011.1-.2c1.2.5 2.6.8 4 .8a1 1 0 011 1V20a1 1 0 01-1 1C10.7 21 3 13.3 3 3a1 1 0 011-1h2.2a1 1 0 011 1c0 1.4.3 2.8.8 4a1 1 0 01-.2 1.1L6.6 10.2z"/></svg>
+            </div>
             <h3>Call</h3>
             <a href="tel:07954879190">07954 879190</a>
           </div>
 
           <div class="contact-card">
-            <div class="contact-icon">✉</div>
+            <div class="contact-icon" aria-hidden="true">
+              <!-- Email SVG -->
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            </div>
             <h3>Email</h3>
             <a href="mailto:the1decorator@gmail.com">the1decorator@gmail.com</a>
           </div>
 
           <div class="contact-card">
-            <div class="contact-icon">💬</div>
+            <div class="contact-icon" aria-hidden="true">
+              <!-- WhatsApp SVG -->
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20.5 3.5A11 11 0 0012 1a11 11 0 00-9.9 6.7A11 11 0 0011 21.9V24l3-1a11 11 0 009.5-20.5zM12 19.2a8.9 8.9 0 01-4.7-1.4l-.3-.2-3 1 1-3.2-.2-.3A8.9 8.9 0 1112 19.2zM16.2 14.9c-.3-.2-1.8-.9-2-.9s-.4 0-.6.2-.7.9-.8 1.1-.3.3-.6.1c-.7-.5-2.3-1.6-3.2-2.7-.9-1.1.1-1 0-1.4-.1-.4-.6-1.1-.9-1.5-.2-.4-.5-.3-.9-.1-.4.3-1.4 1.4-1.4 3.3s1.4 3.8 1.6 4.1c.2.3 2.6 4.1 6.3 5.5 3.7 1.4 3.7 0 4.1-1.1.4-1.1 1-3.1.8-3.4-.2-.2-1.1-.6-1.4-.8z"/></svg>
+            </div>
             <h3>WhatsApp</h3>
             <a href="https://wa.me/447954879190" target="_blank" rel="noopener noreferrer">Message us</a>
           </div>
+
         </div>
 
         <p style="margin-top: 1.6rem;">Serving Dumfries and the surrounding area</p>
@@ -669,9 +275,7 @@
       &nbsp;|&nbsp; <a href="mailto:the1decorator@gmail.com" style="color: var(--gold);">the1decorator@gmail.com</a>
       &nbsp;|&nbsp; <a href="https://wa.me/447954879190" target="_blank" rel="noopener noreferrer" style="color: var(--gold);">WhatsApp</a>
     </p>
-    <p style="margin-top: 0.6rem; font-size: 0.8rem; opacity: 0.7;">
-      © 2026 The Decorator. All rights reserved.
-    </p>
+    <p style="margin-top: 0.6rem; font-size: 0.8rem; opacity: 0.7;">© 2026 The Decorator. All rights reserved.</p>
   </footer>
 
   <script>
