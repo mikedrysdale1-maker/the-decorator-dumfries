@@ -54,7 +54,6 @@
       display: block;
     }
 
-    /* ========== NAV ========== */
     .navbar {
       position: fixed;
       top: 0;
@@ -134,7 +133,6 @@
       transition: 0.3s;
     }
 
-    /* ========== HERO ========== */
     .hero {
       min-height: 100vh;
       background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 60%, #0F2A5A 100%);
@@ -224,7 +222,6 @@
       color: var(--navy);
     }
 
-    /* ========== SECTIONS ========== */
     section {
       padding: 5.5rem 1.5rem;
     }
@@ -255,7 +252,6 @@
       margin: 0 auto 2.5rem;
     }
 
-    /* About */
     .about {
       background: var(--cream);
     }
@@ -316,7 +312,6 @@
       margin-bottom: 0.4rem;
     }
 
-    /* Services */
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -355,7 +350,6 @@
       font-weight: 300;
     }
 
-    /* Contact */
     .contact {
       background: linear-gradient(135deg, var(--navy-dark), var(--navy));
       color: var(--cream);
@@ -374,21 +368,71 @@
     }
 
     .contact-box {
-      max-width: 600px;
+      max-width: 760px;
       margin: 0 auto;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(201, 162, 39, 0.25);
+      border-radius: 18px;
+      padding: 2.5rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.18);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.25rem;
+      margin-top: 1.5rem;
+    }
+
+    .contact-card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(201, 162, 39, 0.15);
+      border-radius: 14px;
+      padding: 1.5rem 1rem;
       text-align: center;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(201, 162, 39, 0.3);
-      border-radius: 12px;
-      padding: 3rem 2rem;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .contact-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(201, 162, 39, 0.6);
+    }
+
+    .contact-icon {
+      width: 52px;
+      height: 52px;
+      margin: 0 auto 0.9rem;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: rgba(201, 162, 39, 0.12);
+      color: var(--gold);
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    .contact-card h3 {
+      color: var(--gold);
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .contact-card a,
+    .contact-card span {
+      color: rgba(248, 246, 241, 0.88);
+      font-size: 1rem;
+      font-weight: 500;
     }
 
     .contact-phone {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
       color: var(--gold);
-      margin: 1.2rem 0;
       display: block;
+      margin: 1.4rem 0 1rem;
+      text-align: center;
     }
 
     .contact-phone:hover {
@@ -398,13 +442,14 @@
     .contact-box p {
       color: rgba(248, 246, 241, 0.8);
       margin-bottom: 0.6rem;
+      text-align: center;
     }
 
     .contact-cta {
       margin-top: 2rem;
+      text-align: center;
     }
 
-    /* Footer */
     footer {
       background: var(--navy-dark);
       color: rgba(248, 246, 241, 0.7);
@@ -417,7 +462,6 @@
       color: var(--gold);
     }
 
-    /* ========== MOBILE ========== */
     @media (max-width: 768px) {
       .nav-links {
         display: none;
@@ -449,6 +493,10 @@
         gap: 2.5rem;
       }
 
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
       .hero-logo {
         width: 140px;
         height: 140px;
@@ -470,8 +518,6 @@
   </style>
 </head>
 <body>
-
-  <!-- NAVIGATION -->
   <nav class="navbar">
     <div class="nav-container">
       <a href="#home" class="logo-text">The Decorator</a>
@@ -490,7 +536,6 @@
     </div>
   </nav>
 
-  <!-- HERO -->
   <section class="hero" id="home">
     <div class="hero-content">
       <img src="logo.png" alt="The Decorator Logo" class="hero-logo">
@@ -506,7 +551,6 @@
     </div>
   </section>
 
-  <!-- ABOUT -->
   <section class="about" id="about">
     <div class="container">
       <h2 class="section-title">About The Decorator</h2>
@@ -540,7 +584,6 @@
     </div>
   </section>
 
-  <!-- SERVICES -->
   <section id="services">
     <div class="container">
       <h2 class="section-title">Our Services</h2>
@@ -582,7 +625,6 @@
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section class="contact" id="contact">
     <div class="container">
       <h2 class="section-title">Get in Touch</h2>
@@ -590,14 +632,29 @@
       <p class="section-subtitle">Ready to transform your home or business?</p>
 
       <div class="contact-box">
-        <p>Call us today for a free, no-obligation quotation</p>
         <a href="tel:07954879190" class="contact-phone">07954 879190</a>
-        <p>Email: <a href="mailto:the1decorator@gmail.com" style="color: var(--gold);">the1decorator@gmail.com</a></p>
-        <p>WhatsApp: <a href="https://wa.me/447954879190" target="_blank" rel="noopener noreferrer" style="color: var(--gold);">07954 879190</a></p>
-        <p>Serving Dumfries and the surrounding area</p>
-        <p style="margin-top: 1.2rem; font-size: 0.95rem;">
-          We are happy to discuss your project, provide advice<br>and arrange a convenient time to visit.
-        </p>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <div class="contact-icon">☎</div>
+            <h3>Call</h3>
+            <a href="tel:07954879190">07954 879190</a>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">✉</div>
+            <h3>Email</h3>
+            <a href="mailto:the1decorator@gmail.com">the1decorator@gmail.com</a>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon">💬</div>
+            <h3>WhatsApp</h3>
+            <a href="https://wa.me/447954879190" target="_blank" rel="noopener noreferrer">Message us</a>
+          </div>
+        </div>
+
+        <p style="margin-top: 1.6rem;">Serving Dumfries and the surrounding area</p>
         <div class="contact-cta">
           <a href="tel:07954879190" class="btn">Call Now</a>
         </div>
@@ -605,7 +662,6 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <p>
       <strong>The Decorator</strong> &nbsp;|&nbsp; High Class Painting and Decorating &nbsp;|&nbsp; Dumfries &nbsp;|&nbsp;
@@ -619,7 +675,6 @@
   </footer>
 
   <script>
-    // Mobile menu toggle
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');
 
@@ -627,7 +682,6 @@
       navLinks.classList.toggle('active');
     });
 
-    // Close menu when a link is clicked
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('active');
