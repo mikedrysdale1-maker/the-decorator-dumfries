@@ -4,10 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Decorator | High Class Painting & Decorating in Dumfries</title>
-  <meta name="description" content="The Decorator – high class painting and decorating in Dumfries. Professional interior & exterior painting, wallpapering and full property redecoration. Call 07954 879190.">
+  <meta name="description" content="Exceptional painting & decorating in Dumfries — meticulous preparation, premium materials and immaculate finishes for homes and businesses. Free quotes.">
+  <link rel="canonical" href="https://www.the-decorator.com/">
+  <meta name="theme-color" content="#0A1F44">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="The Decorator — High Class Painting & Decorating in Dumfries">
+  <meta property="og:description" content="Exceptional painting & decorating in Dumfries — meticulous preparation, premium materials and immaculate finishes for homes and businesses.">
+  <meta property="og:url" content="https://www.the-decorator.com/">
+  <meta property="og:image" content="https://www.the-decorator.com/logo.png">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Decorator — High Class Painting & Decorating in Dumfries">
+  <meta name="twitter:description" content="Exceptional painting & decorating in Dumfries — meticulous preparation, premium materials and immaculate finishes for homes and businesses.">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- LocalBusiness structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "The Decorator",
+    "telephone": "+447954879190",
+    "email": "the1decorator@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dumfries"
+    },
+    "url": "https://www.the-decorator.com/",
+    "description": "High-class painting & decorating: premium finishes, careful preparation and reliable scheduling for homes and businesses in Dumfries.",
+    "sameAs": ["https://www.facebook.com/","https://www.instagram.com/"]
+  }
+  </script>
+
   <style>
     :root {
       --navy: #0A1F44;
@@ -21,72 +53,112 @@
       --whatsapp: #25D366;
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Montserrat', sans-serif; color: var(--text); background: var(--white); line-height: 1.6; }
-    h1,h2,h3 { font-family: 'Playfair Display', serif; font-weight: 600; color: var(--navy); }
-    a { text-decoration: none; color: inherit; }
-    img { max-width:100%; height:auto; display:block; }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { font-family:'Montserrat',sans-serif; color:var(--text); background:var(--white); line-height:1.6; -webkit-font-smoothing:antialiased; }
+    h1,h2,h3{ font-family:'Playfair Display',serif; font-weight:600; color:var(--navy); }
+    a{ text-decoration:none; color:inherit; }
+    img{ max-width:100%; height:auto; display:block; }
 
     /* NAV */
-    .navbar { position: fixed; top:0; left:0; right:0; z-index:1000; background: rgba(10,31,68,0.97); backdrop-filter: blur(8px); padding:0.9rem 0; transition: all .3s; }
-    .nav-container { max-width:1200px; margin:0 auto; padding:0 1.5rem; display:flex; align-items:center; justify-content:space-between; }
-    .logo-text { font-family:'Playfair Display', serif; font-size:1.55rem; font-weight:600; color:var(--gold); }
-    .nav-links { display:flex; gap:2rem; list-style:none; }
-    .nav-links a { color: var(--cream); font-size:.95rem; font-weight:500; }
-    .nav-phone { background:var(--gold); color:var(--navy); padding:.55rem 1.2rem; border-radius:4px; font-weight:600; }
-    .hamburger { display:none; }
+    .navbar{ position:fixed; top:0; left:0; right:0; z-index:1000; background:rgba(10,31,68,0.97); backdrop-filter:blur(8px); padding:0.6rem 0; transition:all .22s; }
+    .nav-container{ max-width:1200px; margin:0 auto; padding:0 1rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+    .logo-text{ font-family:'Playfair Display',serif; font-size:1.45rem; font-weight:600; color:var(--gold); }
+    .nav-links{ display:flex; gap:1.2rem; list-style:none; align-items:center; }
+    .nav-links a{ color:var(--cream); font-size:.95rem; font-weight:500; }
+    .nav-actions{ display:flex; gap:.6rem; align-items:center; }
+    .nav-phone{ background:var(--gold); color:var(--navy); padding:.48rem .9rem; border-radius:6px; font-weight:700; font-size:.95rem; }
+    .nav-icon{ width:36px; height:36px; display:inline-grid; place-items:center; border-radius:6px; background:transparent; color:var(--cream); }
+    .nav-icon a{ display:inline-grid; place-items:center; width:100%; height:100%; }
+    .hamburger{ display:none; background:none; border:none; cursor:pointer; }
 
     /* HERO */
-    .hero { min-height:100vh; background: linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 60%,#0F2A5A 100%); display:flex; align-items:center; justify-content:center; text-align:center; padding:6rem 1.5rem 4rem; position:relative; }
-    .hero-logo { width:180px; height:180px; margin:0 auto 2rem; border-radius:50%; border:3px solid var(--gold); box-shadow:0 12px 40px rgba(0,0,0,0.4); }
-    .hero h1 { color:var(--gold); }
+    .hero{ min-height:82vh; background: linear-gradient(135deg,var(--navy-dark) 0%,var(--navy) 60%,#0F2A5A 100%); display:flex; align-items:center; justify-content:center; text-align:center; padding:5.4rem 1rem 3.5rem; position:relative; }
+    .hero-content{ max-width:780px; position:relative; z-index:1; }
+    .hero-logo{ width:150px; height:150px; margin:0 auto 1.6rem; border-radius:50%; border:3px solid var(--gold); box-shadow:0 12px 36px rgba(0,0,0,0.35); }
+    .hero h1{ font-size:clamp(2.2rem,5vw,3.4rem); color:var(--gold); margin-bottom:.4rem; }
+    .hero-tagline{ font-size:clamp(1rem,2.2vw,1.2rem); color:var(--cream); font-weight:400; letter-spacing:1.2px; text-transform:uppercase; margin-bottom:1rem; }
+    .hero-desc{ font-size:1.02rem; color:rgba(248,246,241,0.9); max-width:620px; margin:0 auto 1.6rem; font-weight:300; }
+    .btn, .btn-outline{ display:inline-block; border-radius:6px; padding:.9rem 1.6rem; font-weight:700; }
+    .btn{ background:var(--gold); color:var(--navy); border:2px solid var(--gold); }
+    .btn-outline{ background:transparent; color:var(--gold); border:2px solid rgba(201,162,39,0.12); }
 
     /* SECTIONS */
-    section { padding:5.5rem 1.5rem; }
-    .container { max-width:1100px; margin:0 auto; }
-    .gold-line { width:60px; height:3px; background:var(--gold); margin:0 auto 2.5rem; }
+    section{ padding:4.8rem 1rem; }
+    .container{ max-width:1100px; margin:0 auto; }
+    .gold-line{ width:56px; height:3px; background:var(--gold); margin:0 auto 1.8rem; }
+    .section-title{ text-align:center; font-size:clamp(1.6rem,3vw,2rem); margin-bottom:.2rem; }
+    .section-subtitle{ text-align:center; color:var(--muted); font-size:1rem; margin-bottom:1.8rem; }
 
-    /* CONTACT CARDS */
-    .contact { background: linear-gradient(135deg, var(--navy-dark), var(--navy)); color: var(--cream); }
-    .contact-box { max-width:960px; margin:0 auto; background: rgba(255,255,255,0.04); border:1px solid rgba(201,162,39,0.18); border-radius:18px; padding:2.5rem; box-shadow:0 18px 36px rgba(0,0,0,0.16); }
-    .contact-grid { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:1.25rem; margin-top:1.5rem; }
-    .contact-card { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); border:1px solid rgba(201,162,39,0.12); border-radius:14px; padding:1.5rem 1rem; text-align:center; transition: transform .28s cubic-bezier(.2,.8,.2,1), box-shadow .28s, border-color .28s, background .28s; }
-    .contact-card:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 20px 40px rgba(10,31,68,0.18); border-color: rgba(201,162,39,0.6); background: linear-gradient(180deg, rgba(201,162,39,0.03), rgba(255,255,255,0.02)); }
-    .contact-icon { width:64px; height:64px; margin:0 auto .9rem; display:grid; place-items:center; border-radius:50%; background: rgba(201,162,39,0.10); color:var(--gold); font-size:1.4rem; }
+    /* ABOUT */
+    .about{ background:var(--cream); }
+    .about-grid{ display:grid; grid-template-columns:1fr 1fr; gap:2.2rem; align-items:center; }
+    .about-text p{ margin-bottom:.9rem; color:var(--muted); font-size:1rem; }
 
-    /* Floating WhatsApp button (green) */
-    .whatsapp-fab { position: fixed; right: 20px; bottom: 20px; width: 64px; height: 64px; background: var(--whatsapp); border-radius: 50%; display: grid; place-items: center; box-shadow: 0 12px 30px rgba(10,31,68,0.25); z-index: 2000; transition: transform 0.18s ease, box-shadow 0.18s ease; }
-    .whatsapp-fab:hover { transform: translateY(-6px) scale(1.06); box-shadow: 0 24px 48px rgba(10,31,68,0.28); }
-    .whatsapp-fab:active { transform: translateY(-2px) scale(0.98); }
-    .whatsapp-fab svg { width: 30px; height: 30px; fill: #ffffff; }
+    /* SERVICES */
+    .services-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1.2rem; }
+    .service-card{ background:var(--white); border:1px solid #E8E4DC; border-radius:10px; padding:1.6rem; text-align:center; }
 
-    /* small screens adjust */
-    @media (max-width:900px) { .contact-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } }
-    @media (max-width:540px) { .contact-grid { grid-template-columns: 1fr; } .whatsapp-fab { right: 14px; bottom: 14px; width:56px; height:56px; } }
+    /* CONTACT */
+    .contact{ background: linear-gradient(135deg,var(--navy-dark),var(--navy)); color:var(--cream); }
+    .contact-box{ max-width:960px; margin:0 auto; background: rgba(255,255,255,0.04); border:1px solid rgba(201,162,39,0.16); border-radius:14px; padding:1.6rem; }
+    .contact-grid{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; margin-top:1rem; }
+    .contact-card{ padding:1rem; text-align:center; }
+    .contact-phone{ font-family:'Playfair Display',serif; font-size:clamp(1.2rem,3.2vw,1.6rem); color:var(--gold); display:block; margin:.6rem 0; }
+
+    /* Floating WhatsApp button */
+    .whatsapp-fab{ position:fixed; right:18px; bottom:18px; width:58px; height:58px; background:var(--whatsapp); border-radius:50%; display:grid; place-items:center; box-shadow:0 14px 34px rgba(0,0,0,0.2); z-index:2000; transition:transform .18s ease; }
+    .whatsapp-fab:hover{ transform:translateY(-6px); }
+    .whatsapp-fab svg{ width:28px; height:28px; fill:#fff; }
+
+    footer{ background:var(--navy-dark); color:rgba(248,246,241,0.8); text-align:center; padding:1.6rem 1rem; font-size:.9rem; }
+
+    /* Responsive */
+    @media (max-width:900px){ .about-grid{ grid-template-columns:1fr; } .contact-grid{ grid-template-columns:repeat(2,1fr); } }
+    @media (max-width:640px){ .nav-links{ display:none; } .hamburger{ display:inline-flex; } .nav-actions{ gap:.4rem; }
+      .hero{ padding-top:5.8rem; }
+      .whatsapp-fab{ right:12px; bottom:12px; width:50px; height:50px; }
+    }
+    @media (max-width:420px){ .whatsapp-fab{ display:none; } }
+
+    /* Accessibility focus */
+    a:focus{ outline:3px solid rgba(201,162,39,0.28); outline-offset:3px; }
   </style>
 </head>
 <body>
-  <nav class="navbar">
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="nav-container">
       <a href="#home" class="logo-text">The Decorator</a>
+
       <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <a href="tel:07954879190" class="nav-phone">07954 879190</a>
-      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+
+      <div class="nav-actions">
+        <!-- Primary phone (kept) -->
+        <a class="nav-phone" href="tel:07954879190" aria-label="Call The Decorator">07954 879190</a>
+        <!-- Header quick CTAs: email and WhatsApp -->
+        <div class="nav-icon" title="Email"><a href="mailto:the1decorator@gmail.com" aria-label="Email The Decorator"><svg viewBox="0 0 24 24" width="18" height="18" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#fff" d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a></div>
+        <div class="nav-icon" title="WhatsApp"><a href="https://wa.me/447954879190" target="_blank" rel="noopener noreferrer" aria-label="Message on WhatsApp"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#ffffff" d="M16.001 2C8.268 2 2 8.268 2 16.002c0 2.822.739 5.44 2.143 7.77L2 30l6.391-2.103A13.928 13.928 0 0016 30c7.733 0 14-6.268 14-13.998C30 8.268 23.734 2 16.001 2zm7.196 19.195c-.238.67-1.367 1.281-1.925 1.373-.513.086-1.142.123-2.124-.19-4.058-1.23-6.67-3.49-8.85-6.767-.603-.903-.28-1.382.268-1.82.291-.237.646-.57.969-.855.323-.285.43-.474.645-.75.214-.277.107-.52-.053-.74-.16-.219-1.414-3.3-1.94-4.27-.51-.94-1.034-.81-1.427-.83-.37-.02-.796-.025-1.215-.025-.42 0-1.12.157-1.71.74-.59.583-2.26 2.208-2.26 5.38 0 3.17 2.31 6.18 2.63 6.61.32.43 4.54 6.9 11.01 9.457 6.47 2.556 6.47 1.702 7.63 1.596.74-.08 2.4-.98 2.74-1.92.34-.94.34-1.75.238-1.92-.103-.17-.37-.28-.78-.48z"/></svg></a></div>
+
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <svg width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="22" height="2" rx="1" fill="#C9A227"></rect><rect y="6" width="22" height="2" rx="1" fill="#C9A227"></rect><rect y="12" width="22" height="2" rx="1" fill="#C9A227"></rect></svg>
+      </button>
     </div>
   </nav>
 
+  <main>
   <section class="hero" id="home">
     <div class="hero-content">
-      <img src="logo.png" alt="The Decorator Logo" class="hero-logo">
+      <img src="logo.png" alt="The Decorator logo" class="hero-logo">
       <h1>The Decorator</h1>
-      <p class="hero-tagline">High Class Painting & Decorating</p>
-      <p class="hero-desc">Transforming homes and commercial spaces across Dumfries with exceptional craftsmanship and attention to detail.</p>
+      <p class="hero-tagline">Exceptional, considered decorating</p>
+      <p class="hero-desc">Meticulous preparation, premium materials and immaculate finishes — tailored decorating for discerning homeowners and businesses across Dumfries.</p>
       <div>
         <a href="#services" class="btn btn-outline">Our Services</a>
       </div>
@@ -100,20 +172,20 @@
       <p class="section-subtitle">High-class painting and decorating in Dumfries</p>
       <div class="about-grid">
         <div class="about-text">
-          <p>At The Decorator we specialise in delivering a superior finish that homeowners and businesses across Dumfries and the surrounding area can be proud of.</p>
-          <p>Every project is approached with the same care and professionalism — from thorough surface preparation through to the final coat.</p>
+          <p>We deliver a superior finish by combining careful surface preparation, expert application and premium materials. Every project is treated with respect and attention to detail.</p>
+          <p>Our approach minimises disruption while ensuring longevity and a flawless result — from single-room refreshes to full property redecoration.</p>
           <ul class="about-list">
-            <li>Thorough preparation – the foundation of every lasting job</li>
-            <li>Premium paints and materials</li>
-            <li>Clean, respectful workmanship</li>
+            <li>Thorough preparation — the foundation of every lasting finish</li>
+            <li>Premium paints and proven materials</li>
+            <li>Clean, considerate workmanship</li>
             <li>Clear communication and reliable scheduling</li>
-            <li>Attention to the fine details that make a real difference</li>
+            <li>Finishing touches that elevate a property</li>
           </ul>
         </div>
         <div class="about-image">
           <img src="logo.png" alt="The Decorator">
           <h3>The Decorator</h3>
-          <p style="color: rgba(248,246,241,0.85); font-size:0.95rem;">Proudly serving Dumfries<br>and the wider region</p>
+          <p style="color: rgba(248,246,241,0.85); font-size:0.95rem;">Proudly serving Dumfries and the wider region</p>
         </div>
       </div>
     </div>
@@ -146,7 +218,7 @@
           <div class="contact-card">
             <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M6.6 10.2a15.1 15.1 0 006.2 6.2l1.9-1.9a1 1 0 011.1-.2c1.2.5 2.6.8 4 .8a1 1 0 011 1V20a1 1 0 01-1 1C10.7 21 3 13.3 3 3a1 1 0 011-1h2.2a1 1 0 011 1c0 1.4.3 2.8.8 4a1 1 0 01-.2 1.1L6.6 10.2z"/></svg></div>
             <h3>Call</h3>
-            <a href="tel:07954879190">07954 879190</a>
+            <a class="contact-phone" href="tel:079548879190">07954 879190</a>
           </div>
           <div class="contact-card">
             <div class="contact-icon" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
@@ -159,14 +231,14 @@
             <a href="https://wa.me/447954879190" target="_blank" rel="noopener noreferrer">Message us</a>
           </div>
         </div>
-        <p style="margin-top:1.6rem;">Serving Dumfries and the surrounding area</p>
+        <p style="margin-top:1.2rem;">Serving Dumfries and the surrounding area</p>
       </div>
     </div>
   </section>
+  </main>
 
-  <!-- Floating WhatsApp button (green) -->
+  <!-- Floating WhatsApp button -->
   <a class="whatsapp-fab" href="https://wa.me/447954879190" target="_blank" rel="noopener noreferrer" aria-label="Message The Decorator on WhatsApp">
-    <!-- Official WhatsApp white logo on green background -->
     <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#ffffff" d="M16.001 2C8.268 2 2 8.268 2 16.002c0 2.822.739 5.44 2.143 7.77L2 30l6.391-2.103A13.928 13.928 0 0016 30c7.733 0 14-6.268 14-13.998C30 8.268 23.734 2 16.001 2zm7.196 19.195c-.238.67-1.367 1.281-1.925 1.373-.513.086-1.142.123-2.124-.19-4.058-1.23-6.67-3.49-8.85-6.767-.603-.903-.28-1.382.268-1.82.291-.237.646-.57.969-.855.323-.285.43-.474.645-.75.214-.277.107-.52-.053-.74-.16-.219-1.414-3.3-1.94-4.27-.51-.94-1.034-.81-1.427-.83-.37-.02-.796-.025-1.215-.025-.42 0-1.12.157-1.71.74-.59.583-2.26 2.208-2.26 5.38 0 3.17 2.31 6.18 2.63 6.61.32.43 4.54 6.9 11.01 9.457 6.47 2.556 6.47 1.702 7.63 1.596.74-.08 2.4-.98 2.74-1.92.34-.94.34-1.75.238-1.92-.103-.17-.37-.28-.78-.48z"/></svg>
   </a>
 
@@ -176,19 +248,29 @@
   </footer>
 
   <script>
+    // Mobile menu toggle
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');
-    if (hamburger) { hamburger.addEventListener('click', () => { navLinks.classList.toggle('active'); }); }
+    if (hamburger) {
+      hamburger.addEventListener('click', () => {
+        const expanded = hamburger.getAttribute('aria-expanded') === 'true';
+        hamburger.setAttribute('aria-expanded', String(!expanded));
+        navLinks.classList.toggle('active');
+      });
+    }
 
-    document.querySelectorAll('.nav-links a').forEach(link => { link.addEventListener('click', () => { navLinks.classList.remove('active'); }); });
+    // Close menu when a link is clicked
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => { navLinks.classList.remove('active'); if (hamburger) hamburger.setAttribute('aria-expanded', 'false'); });
+    });
 
-    // Small entrance animation for the FAB on load
+    // FAB entrance animation
     document.addEventListener('DOMContentLoaded', () => {
       const fab = document.querySelector('.whatsapp-fab');
       if (fab) {
         fab.style.transform = 'translateY(8px) scale(.98)';
         fab.style.opacity = '0';
-        setTimeout(() => { fab.style.transition = 'transform 0.36s cubic-bezier(.2,.8,.2,1), opacity 0.3s'; fab.style.transform = 'translateY(0) scale(1)'; fab.style.opacity = '1'; }, 200);
+        setTimeout(() => { fab.style.transition = 'transform 0.36s cubic-bezier(.2,.8,.2,1), opacity 0.3s'; fab.style.transform = 'translateY(0) scale(1)'; fab.style.opacity = '1'; }, 260);
       }
     });
   </script>
