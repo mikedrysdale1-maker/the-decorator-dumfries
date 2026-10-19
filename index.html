@@ -29,9 +29,9 @@
     "@type": "HousePainter",
     "name": "The Decorator",
     "image": "https://www.the-decorator.com/logo.png",
+    "url": "https://www.the-decorator.com/",
     "telephone": "+447954879190",
     "email": "the1decorator@gmail.com",
-    "url": "https://www.the-decorator.com/",
     "description": "High-class painting and decorating in Dumfries: interior and exterior painting, wallpapering, woodwork finishing and full property redecoration.",
     "address": {
       "@type": "PostalAddress",
@@ -39,8 +39,29 @@
       "addressRegion": "Dumfries and Galloway",
       "addressCountry": "GB"
     },
-    "areaServed": { "@type": "City", "name": "Dumfries" },
-    "priceRange": "££"
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Dumfries"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Dumfries and Galloway"
+      }
+    ],
+    "priceRange": "££",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "08:00",
+      "closes": "18:00"
+    }
   }
   </script>
   <style>
@@ -215,92 +236,3 @@
       </div>
     </div>
   </section>
-  <section class="contact" id="contact" aria-labelledby="contact-heading">
-    <div class="container">
-      <h2 class="section-title" id="contact-heading">Get in Touch</h2>
-      <div class="gold-line"></div>
-      <p class="section-subtitle">Ready to transform your home or business? Request a free quote.</p>
-      <div class="contact-box">
-        <div class="contact-layout">
-          <div class="contact-details">
-            <div class="contact-item">
-              <div class="contact-item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.6 10.2a15.1 15.1 0 006.2 6.2l1.9-1.9a1 1 0 011.1-.2c1.2.5 2.6.8 4 .8a1 1 0 011 1V20a1 1 0 01-1 1C10.7 21 3 13.3 3 3a1 1 0 011-1h2.2a1 1 0 011 1c0 1.4.3 2.8.8 4a1 1 0 01-.2 1.1L6.6 10.2z"/></svg></div>
-              <div><h3>Call</h3><a class="contact-phone-large" href="tel:+447954879190">07954 879190</a></div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></div>
-              <div><h3>Email</h3><a href="mailto:the1decorator@gmail.com">the1decorator@gmail.com</a></div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.5 3.5A11 11 0 0012 1a11 11 0 00-9.9 6.7A11 11 0 0011 21.9V24l3-1a11 11 0 009.5-20.5zM12 19.2a8.9 8.9 0 01-4.7-1.4l-.3-.2-3 1 1-3.2-.2-.3A8.9 8.9 0 1112 19.2z"/></svg></div>
-              <div><h3>WhatsApp</h3><a href="https://wa.me/447954879190" target="_blank" rel="noopener noreferrer">Message us</a></div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-item-icon" aria-hidden="true"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z"/></svg></div>
-              <div><h3>Area served</h3><span>Dumfries & surrounding area</span></div>
-            </div>
-          </div>
-          <div class="contact-form-wrap">
-            <h3>Request a free quote</h3>
-            <form class="contact-form" action="mailto:the1decorator@gmail.com" method="post" enctype="text/plain">
-              <div class="form-row">
-                <div><label for="name">Name</label><input type="text" id="name" name="Name" required placeholder="Your name" autocomplete="name"></div>
-                <div><label for="phone">Phone</label><input type="tel" id="phone" name="Phone" placeholder="Your number" autocomplete="tel"></div>
-              </div>
-              <div><label for="email">Email</label><input type="email" id="email" name="Email" required placeholder="you@example.com" autocomplete="email"></div>
-              <div><label for="service">Service interested in</label>
-                <select id="service" name="Service">
-                  <option value="">Select a service…</option>
-                  <option value="Interior Painting">Interior Painting</option>
-                  <option value="Exterior Painting">Exterior Painting</option>
-                  <option value="Wallpapering">Wallpapering</option>
-                  <option value="Woodwork Finishing">Woodwork Finishing</option>
-                  <option value="Commercial Decorating">Commercial Decorating</option>
-                  <option value="Full Property Redecoration">Full Property Redecoration</option>
-                  <option value="Other / Not sure">Other / Not sure</option>
-                </select>
-              </div>
-              <div><label for="message">Message</label><textarea id="message" name="Message" required placeholder="Tell us about your project…"></textarea></div>
-              <button type="submit" class="form-submit">Send enquiry</button>
-              <p class="form-note">Or call / WhatsApp for a quicker response.</p>
-            </form>
-          </div>
-        </div>
-        <p class="contact-area">Serving Dumfries and the surrounding area · Free no-obligation quotes</p>
-      </div>
-    </div>
-  </section>
-  </main>
-  <a class="whatsapp-fab" href="https://wa.me/447954879190" target="_blank" rel="noopener noreferrer" aria-label="Message The Decorator on WhatsApp">
-    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill="#fff" d="M17.5 14.4c-.3-.1-1.6-.8-1.9-.9-.2-.1-.4-.1-.6.1-.2.3-.6.9-.8 1-.1.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.5-1-.9-1.4-1.9-1.6-2.2-.2-.3 0-.4.1-.6l.5-.6c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.1c-.2-.5-.5-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s.9 2.5 1 2.6c.1.2 1.8 2.8 4.4 3.9 2.6 1 2.6 0 3-1 .2-.6.6-1 .4-1.1zM12 2a10 10 0 00-8.7 14.9L2 22l5.2-1.4A10 10 0 1012 2z"/></svg>
-  </a>
-  <footer>
-    <p><strong>The Decorator</strong> · Painting and Decorating · Dumfries</p>
-    <p><a href="tel:+447954879190">07954 879190</a> · <a href="mailto:the1decorator@gmail.com">the1decorator@gmail.com</a> · <a href="https://wa.me/447954879190" target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
-    <p style="margin-top:.6rem;font-size:.8rem;opacity:.7">© 2026 The Decorator. All rights reserved.</p>
-  </footer>
-  <script>
-    const hamburger=document.getElementById('hamburger'),navLinks=document.getElementById('navLinks');
-    if(hamburger&&navLinks){
-      hamburger.addEventListener('click',()=>{
-        const open=hamburger.getAttribute('aria-expanded')==='true';
-        hamburger.setAttribute('aria-expanded',String(!open));
-        hamburger.setAttribute('aria-label',open?'Open menu':'Close menu');
-        navLinks.classList.toggle('active');
-      });
-      navLinks.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{
-        navLinks.classList.remove('active');
-        hamburger.setAttribute('aria-expanded','false');
-        hamburger.setAttribute('aria-label','Open menu');
-      }));
-      document.addEventListener('click',e=>{
-        if(!hamburger.contains(e.target)&&!navLinks.contains(e.target)){
-          navLinks.classList.remove('active');
-          hamburger.setAttribute('aria-expanded','false');
-          hamburger.setAttribute('aria-label','Open menu');
-        }
-      });
-    }
-  </script>
-</body>
-</html>
