@@ -29,9 +29,9 @@
     "@type": "HousePainter",
     "name": "The Decorator",
     "image": "https://www.the-decorator.com/logo.png",
+    "url": "https://www.the-decorator.com/",
     "telephone": "+447954879190",
     "email": "the1decorator@gmail.com",
-    "url": "https://www.the-decorator.com/",
     "description": "High-class painting and decorating in Dumfries: interior and exterior painting, wallpapering, woodwork finishing and full property redecoration.",
     "address": {
       "@type": "PostalAddress",
@@ -39,8 +39,29 @@
       "addressRegion": "Dumfries and Galloway",
       "addressCountry": "GB"
     },
-    "areaServed": { "@type": "City", "name": "Dumfries" },
-    "priceRange": "££"
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Dumfries"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Dumfries and Galloway"
+      }
+    ],
+    "priceRange": "££",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "08:00",
+      "closes": "18:00"
+    }
   }
   </script>
   <style>
