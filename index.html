@@ -2,10 +2,222 @@
 <html lang="en-GB">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Painter and Decorator Dumfries | The Decorator - 35 Years Serving Dumfries & Galloway</title>
-  <meta name="description" content="Trusted painter and decorator in Dumfries, Dalbeattie & Dumfries & Galloway. Interior & exterior painting, wallpapering. 35 years experience. Free quotes — 07954 879190.">
-  <!-- truncated for safety in this example; full content would be inserted here -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painter and Decorator Dumfries | The Decorator - 35 Years Serving Dumfries &amp; Galloway</title>
+  <meta name="description" content="Professional painters &amp; decorators in Dumfries &amp; Dalbeattie. Interior &amp; exterior painting, wallpapering, commercial work. 35 years experience. Free quotes DG1, DG2, DG5 - Call 07954 879190">
+  <meta name="keywords" content="painter decorator Dumfries, painters Dumfries, decorator Dalbeattie, interior painting Dumfries, exterior painting, wallpapering Dumfries, commercial decorating Dumfries and Galloway">
+  <link rel="canonical" href="https://www.the-decorator.com/">
+  <meta name="geo.region" content="GB-DGY">
+  <meta name="geo.placename" content="Dalbeattie">
+  <meta name="geo.position" content="54.9333;-3.8222">
+  <meta name="ICBM" content="54.9333, -3.8222">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Painter and Decorator in Dumfries | The Decorator">
+  <meta property="og:description" content="35 years experience serving Dumfries &amp; Galloway. Interior, exterior, wallpapering and commercial decorating. Free quotes.">
+  <meta property="og:url" content="https://www.the-decorator.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_GB">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://www.the-decorator.com/#business",
+    "name": "The Decorator",
+    "alternateName": "The Decorator - Painter and Decorator Dumfries",
+    "url": "https://www.the-decorator.com",
+    "telephone": "+447954879190",
+    "email": "the1decorator@gmail.com",
+    "image": "https://www.the-decorator.com/logo.png",
+    "priceRange": "££",
+    "description": "Professional painter and decorator with 35 years experience serving Dumfries & Galloway. Interior & exterior painting, wallpapering, commercial decorating.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dalbeattie",
+      "addressRegion": "Dumfries and Galloway",
+      "addressCountry": "GB",
+      "postalCode": "DG5",
+      "streetAddress": "Dalbeattie, Dumfries"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "54.9333",
+      "longitude": "-3.8222"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Dumfries" },
+      { "@type": "City", "name": "Dalbeattie" },
+      { "@type": "City", "name": "Castle Douglas" },
+      { "@type": "City", "name": "Kirkcudbright" },
+      { "@type": "AdministrativeArea", "name": "Dumfries and Galloway" }
+    ],
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": "54.9333",
+        "longitude": "-3.8222"
+      },
+      "geoRadius": "30000"
+    },
+    "openingHours": "Mo-Fr 08:00-18:00, Sa 08:00-14:00",
+    "sameAs": []
+  }
+  </script>
+
+  <style>
+    :root {
+      --ink: #1a1a1a;
+      --paper: #faf8f5;
+      --accent: #2c5f4e;
+      --accent-light: #4a8a72;
+      --brass: #c4a36a;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.6;
+      color: var(--ink);
+      background: var(--paper);
+    }
+    header {
+      background: var(--ink);
+      color: white;
+      padding: 1.5rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+    header p {
+      opacity: 0.85;
+      margin-top: 0.25rem;
+      font-size: 1.05rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin: 2rem 0 1rem;
+      color: var(--accent);
+    }
+    p { margin-bottom: 1rem; }
+    .intro {
+      font-size: 1.1rem;
+      background: white;
+      padding: 1.5rem;
+      border-left: 4px solid var(--brass);
+      border-radius: 0 8px 8px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .services {
+      display: grid;
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .service {
+      background: white;
+      padding: 1.25rem;
+      border-radius: 8px;
+      border: 1px solid #eee;
+    }
+    .service h3 { color: var(--accent); margin-bottom: 0.35rem; }
+    .cta {
+      background: var(--accent);
+      color: white;
+      text-align: center;
+      padding: 2.5rem 1.5rem;
+      border-radius: 12px;
+      margin: 2.5rem 0;
+    }
+    .cta a {
+      display: inline-block;
+      background: white;
+      color: var(--accent);
+      padding: 0.85rem 1.75rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0.5rem;
+      font-size: 1.1rem;
+    }
+    .cta a.whatsapp { background: #25D366; color: white; }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #666;
+      border-top: 1px solid #eee;
+    }
+    @media (min-width: 640px) {
+      header h1 { font-size: 2.2rem; }
+      .services { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
 </head>
-<body>Optimized content restored</body>
+<body>
+  <header>
+    <h1>Painter and Decorator in Dumfries</h1>
+    <p>The Decorator · 35 Years Experience · Dumfries &amp; Galloway</p>
+  </header>
+
+  <main class="container">
+    <section class="intro">
+      <p>Looking for a trusted painter and decorator in Dumfries? The Decorator brings 35 years of professional experience to homes and businesses across Dumfries &amp; Galloway. Based in Dalbeattie and serving Dumfries, Castle Douglas, Kirkcudbright and the surrounding areas, we provide high-quality interior painting, exterior painting, wallpapering, and commercial decorating services. Whether you need a single room refreshed or a full property transformation, our attention to detail and reliable service ensures a flawless finish every time. As leading painters and decorators in Dumfries, we work with premium paints and materials, offer free no-obligation quotes across DG1, DG2, DG5 and beyond, and take pride in leaving every job clean and on schedule. Contact The Decorator today for expert decorating that lasts.</p>
+    </section>
+
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service">
+        <h3>Interior Painting</h3>
+        <p>Complete room makeovers, feature walls, ceilings and woodwork finished to the highest standard.</p>
+      </div>
+      <div class="service">
+        <h3>Exterior Painting</h3>
+        <p>Weather-resistant coatings that protect and enhance your property’s kerb appeal.</p>
+      </div>
+      <div class="service">
+        <h3>Wallpapering &amp; Feature Walls</h3>
+        <p>Expert hanging of all wallpaper types, including feature walls and commercial applications.</p>
+      </div>
+      <div class="service">
+        <h3>Commercial Decorating</h3>
+        <p>Professional standards for offices, retail and commercial spaces with minimal disruption.</p>
+      </div>
+      <div class="service">
+        <h3>Woodwork &amp; Trim</h3>
+        <p>Doors, skirting, architraves and frames prepared and finished to a flawless standard.</p>
+      </div>
+      <div class="service">
+        <h3>Full Property Redecoration</h3>
+        <p>End-to-end projects managed from start to finish with clear communication throughout.</p>
+      </div>
+    </div>
+
+    <div class="cta">
+      <h2 style="color:white; margin-top:0;">Free Quotes Across Dumfries &amp; Galloway</h2>
+      <p>Call, WhatsApp or email — no obligation.</p>
+      <a href="tel:07954879190">Call 07954 879190</a>
+      <a href="https://wa.me/447954879190" class="whatsapp">WhatsApp</a>
+      <a href="mailto:the1decorator@gmail.com">Email Us</a>
+    </div>
+
+    <section>
+      <h2>Serving Dumfries, Dalbeattie &amp; Beyond</h2>
+      <p>Proudly based in Dalbeattie (DG5) and covering Dumfries (DG1, DG2), Castle Douglas, Kirkcudbright and the wider Dumfries &amp; Galloway area. Fully insured, reliable, and committed to leaving every job clean and on schedule.</p>
+      <p><strong>Hours:</strong> Monday–Friday 8am–6pm, Saturday 8am–2pm</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 The Decorator · Painter &amp; Decorator Dumfries · 07954 879190 · the1decorator@gmail.com</p>
+    <p>Serving DG1 · DG2 · DG5 and surrounding areas</p>
+  </footer>
+</body>
 </html>
