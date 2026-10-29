@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+# Block admin / private areas if you have them
+Disallow: /private/
+Disallow: /admin/
+
 Sitemap: https://www.the-decorator.com/sitemap.xml
